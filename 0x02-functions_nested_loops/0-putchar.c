@@ -1,11 +1,12 @@
 /*First c program*/
 #include <stdio.h>
+#include "main.h"
 /**
  * main - This is the main function
  * Return: 0
  */
 int main(void)
 {
-	puts("_putchar");
+	printf(_putchar);
 	return (0);
 }
