@@ -4,10 +4,10 @@
  */
 void print_alphabet(void)
 {	
-	int alpha = 97
-	for (; alpha < 122; alpha ++)
+	int alpha = 97;
+	for (; alpha < 122; alpha++)
 	{
-	printf(char(alpha));
+	printf("%c",char(alpha));
 	}
 	printf("\n");
 }
