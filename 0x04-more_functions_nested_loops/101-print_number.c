@@ -5,7 +5,7 @@
  *
  * @n: The integer to be printed.
 */
-i
+
 void print_number(int n)
 {
 	unsigned int num = n;

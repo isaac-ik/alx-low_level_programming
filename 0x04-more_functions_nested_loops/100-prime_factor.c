@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 /**
- * _sqrt - finds the square root
+ * _sqrt - finds the square root using a fuunction
  *
  * @x: input number
  *
