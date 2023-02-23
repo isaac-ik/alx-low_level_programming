@@ -1,7 +1,7 @@
 /**
  * _isdigit - checks if input is digit between 0 - 9
  *
- * @c: input
+ * @c: input going with the function
  *
  * Return: 1 if is digit, 0 if not
 */
