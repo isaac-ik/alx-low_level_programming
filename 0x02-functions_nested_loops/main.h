@@ -7,7 +7,7 @@ void print_alphabet(void)
 	int alpha = 97;
 	for (; alpha < 122; alpha++)
 	{
-	printf("%c",char(alpha));
+	printf("%c",alpha);
 	}
 	printf("\n");
 }
