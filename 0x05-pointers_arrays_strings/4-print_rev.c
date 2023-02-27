@@ -7,17 +7,14 @@
  */
 void print_rev(char *s)
 {
-	int length;
+	int index;
 
-	length = 0;
-	while (*s != '\0')
-	{
-		length++;
-		s++;
-	}
-	for (--length; length >= 0; --length)
-	{
-		_putchar(s[length]);
-	}
+	/*finds the length of string without null character*/
+	for (index = 0; s[index] != '\0'; ++index)
+		;
+
+	/*print char from the last index as you decrement*/
+	for (--index; index >= 0; --index)
+		_putchar(s[index]);
 	_putchar('\n');
 }
