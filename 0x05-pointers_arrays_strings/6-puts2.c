@@ -1,5 +1,4 @@
 #include"main.h"
-
 /**
  * puts2 - prints every character of a string
  *
@@ -18,3 +17,4 @@ void puts2(char *str)
 			_putchar(str[i]);
 	}
 	_putchar('\n');
+}
