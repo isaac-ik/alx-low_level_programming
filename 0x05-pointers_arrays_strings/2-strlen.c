@@ -9,10 +9,12 @@
 int _strlen(char *c)
 {
 	int length;
-	char str[] = c;
+	char str[];
+
+	str[] = c;
 	length = 0;
 
-	while (str[length] != NULL)
+	while (str[length] != "\0")
 	{
 		length = length + 1;
 	}
