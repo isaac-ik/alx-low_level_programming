@@ -1,4 +1,3 @@
-#include <stddef.h>
 /**
  * _strlen - return the length of a string
  *
@@ -6,15 +5,13 @@
  *
  * Return: 0
  */
-int _strlen(char *c)
+int _strlen(char *s)
 {
 	int length;
-	char str[];
-
-	str[] = c;
+	
 	length = 0;
 
-	while (str[length] != "\0")
+	while (*s != "\0")
 	{
 		length = length + 1;
 	}
