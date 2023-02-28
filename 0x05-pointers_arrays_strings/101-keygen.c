@@ -12,25 +12,21 @@
 int main(void)
 {
 	srand(time(NULL));
-	char password[PASSWORD_LENGTH + 1] = {0};  // Initialize to all zero
-	// Generate random characters for the password
+	char password[PASSWORD_LENGTH + 1] = {0};
 	
 	for (int i = 0; i < PASSWORD_LENGTH; i++) 
 	{
 		int rand_num = rand() % 62;
-		if (rand_num < 26) 
-		{  
-			// Generate a random uppercase letter 
+		if (rand_num < 26)
+		{ 
 			password[i] = 'A' + rand_num;
 		}
 		else if (rand_num < 52) 
 		{
-			// Generate a random lowercase letter
 			password[i] = 'a' + (rand_num - 26);
 		}
 		else 
 		{
-			// Generate a random digit
 			password[i] = '0' + (rand_num - 52);
 		}
 	}
