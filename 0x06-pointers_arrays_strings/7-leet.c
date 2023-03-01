@@ -21,7 +21,7 @@ char *leet(char *s)
 		 * to check if the value is equal to
 		 * any small letter in array sl or
 		 * upper letter in array ul and if it
-		 * is replace it with the value in array n
+		 * is replace it with the values in array n
 		*/
 		for (i = 0; i < 5; i++)
 		{

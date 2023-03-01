@@ -24,7 +24,7 @@ int _strcmp(char *s1, char *s2)
 	while (s1[i] != '\0' && s2[i] != '\0')
 	{
 		/**
-		 * if they differ by a single character
+		 * if they differ by single character
 		 * don't iterate further
 		*/
 		if (s1[i] != s2[i])

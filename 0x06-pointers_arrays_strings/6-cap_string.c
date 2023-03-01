@@ -19,7 +19,7 @@ char *cap_string(char *s)
 		{
 			/**
 			 * if we have a null character
-			 * change its value to capital
+			 * change its values to capital
 			*/
 			if (i == 0)
 			{
