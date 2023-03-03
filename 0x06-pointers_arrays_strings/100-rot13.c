@@ -1,4 +1,9 @@
-
+/**
+*@rot13 - encodes
+*@str:string to be encoded
+*
+*Return: char
+*/
 char *rot13(char *str) {
     char *result = str;
     int i, j;
@@ -24,5 +29,5 @@ char *rot13(char *str) {
         result[i] = c;
     }
 
-    return result;
+    return (result);
 }
