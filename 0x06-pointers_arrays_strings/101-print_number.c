@@ -1,7 +1,7 @@
 /**
  * print_number - A function that prints a number
  *
- * @n: number
+ * @n: number to be manipulated
  * 
  *
  * Return: nothing
