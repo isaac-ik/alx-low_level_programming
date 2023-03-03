@@ -1,4 +1,11 @@
-
+/**
+ * print_number - A function that prints a number
+ *
+ * @n: number
+ * 
+ *
+ * Return: nothing
+*/
 void print_number(int n) {
     if (n < 0) {
         _putchar('-');
