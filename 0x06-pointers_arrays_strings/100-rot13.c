@@ -3,30 +3,24 @@
  * @str:string to be encoded
  * Return: char
  */
-char *rot13(char *str) {
-    char *result = str;
-    int i, j;
-    char c;
 
-    for (i = 0; str[i] != '\0'; i++) {
-        c = str[i];
-        if (c >= 'a' && c <= 'z') {
-            for (j = 0; j < 13; j++) {
-                c++;
-                if (c > 'z') {
-                    c = 'a';
-                }
-            }
-        } else if (c >= 'A' && c <= 'Z') {
-            for (j = 0; j < 13; j++) {
-                c++;
-                if (c > 'Z') {
-                    c = 'A';
-                }
-            }
+char *rot13(char *s)
+{
+    while (*s != '\0')
+    {
+        if ((*s >= 65 && *s <= 77) || (*s >= 97 && *s <= 109))
+        {
+            _putchar (*s + 13);
         }
-        result[i] = c;
+        else if ((*s >= 78 && *s <= 90) || (*s >= 110 && *s <= 122))
+        {
+            _putchar (*s - 13);
+        }
+        else
+        {
+            _putchar(*s);
+        }
+        ++s;
     }
-
-    return (result);
+    return (0);
 }
