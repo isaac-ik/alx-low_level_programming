@@ -1,6 +1,6 @@
 /*
  * @rot13 - encodes
- * @str:string to be encoded
+ * @str: string to be encoded
  * Return: char
  */
 
