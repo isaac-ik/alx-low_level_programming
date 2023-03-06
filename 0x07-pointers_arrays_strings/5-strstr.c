@@ -3,7 +3,7 @@
  *
  * @haystack: input string to search for matching
  *            substrings
- * @needle: subtring to search for
+ * @needle: subtring to search for.
  *
  * Return: a pointer to the beginning
  *         of the located substring or
