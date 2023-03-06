@@ -1,7 +1,7 @@
 /**
  * set_string - sets a pointer to a char
  *
- * @s: value of a pointer
+ * @s: value of a pointer.
  * @to:  pointer
  *
  * Retunr: nothing
