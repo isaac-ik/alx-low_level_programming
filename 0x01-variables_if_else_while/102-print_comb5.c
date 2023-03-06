@@ -1,5 +1,13 @@
 #include<stdio.h>
 
+/**
+ * main - Entry point
+ *
+ * Description: print all possible different combinations of two two-digits.
+ *
+ * Return: Always 0 (Success)
+*/
+
 int main(void)
 {
     int i = 0, j = 0;
