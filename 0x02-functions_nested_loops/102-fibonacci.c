@@ -1,7 +1,7 @@
 #include"main.h"
 
 /**
- * main - Entry point
+ * main - Entry point.
  *
  * Description: prints the first 50 Fibonacci numbers
  *		starting with 1 and 2 folled by a new line

@@ -2,7 +2,7 @@
 
 /**
  * _abs - function that computes the absolute
- *       value of an integer
+ *       value of an intege.r
  *
  * @n: takes in integer type input for function
  *
