@@ -1,13 +1,13 @@
 #include <stdio.h>
 /**
  * main - program to print the number of parameter passed
- * @argc - argument count
- * @argv - array of pointers to parameters
+ * @argc: argument count
+ * @argv: array of pointers to parameters
  *
- * Retrun: 0
+ * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
 	printf("%d\n", argc);
 
