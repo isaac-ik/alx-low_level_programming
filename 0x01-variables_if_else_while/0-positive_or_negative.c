@@ -1,32 +1,29 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
 /**
- * main - description goes here
+ * main - code goes here
  *
- * Description: prints out wheterh a number is +ve, zer or -ve
- * Return: always 0
+ * Description: prints out the wheteher its +ve, zero or -ve
+ * Return: Always 0
  */
 int main(void)
 {
 	int n;
+
 	srand(time(0));
-
 	n = rand() - RAND_MAX / 2;
-
 	if (n > 0)
 	{
-		printf("is postive\n";
+		printf("%d is positive", n);
 	}
 	else if (n == 0)
 	{
-		printf("is zero\n");
-		}
+		printf("%d is zero\n", n);
+	}
 	else
 	{
-		printf("is negative\n");
+		printf("%d is negative\n", n);
 	}
-
 	return (0);
 }
