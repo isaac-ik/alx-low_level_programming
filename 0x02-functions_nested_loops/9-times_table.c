@@ -14,19 +14,15 @@ void times_table(void)
 		for (xnum = 0; xnum <= 9; xnum++)
 		{
 			multip = num * xnum;
-			if (multip < 10)
-			{
-				_putchar(multip + '0');
-			}
-			else if (multip >= 10)
+			if (multip / 10 > 0)
 			{
 				_putchar((multip / 10) + '0');
-				_putchar((multip % 10) + '0');
 			}
 			else
 			{
-				_putchar(48);
+				_putchar(' ');
 			}
+			_putchar((multip % 10) + '0');
 
 			if (xnum < 9)
 			{
