@@ -1,7 +1,5 @@
 #include "main.h"
 
-int _putchar(char c);
-
 /**
   * print_alphabet - A function
   * Description: A function to print the alphabets
