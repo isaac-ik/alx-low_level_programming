@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 /**
-  * main - a program that computes and prints 
+  * main - a program that computes and prints
   * the sum of all the multiples of 3 or 5 below 1024 (excluded)
-  * 
   * Programmer: Isaac-ik
   * Return: 0
   */
@@ -28,6 +27,6 @@ int main(void)
 			sum = sum + 0;
 		}
 	}
-	printf("%d\n",sum);
+	printf("%d\n", sum);
 	return (0);
 }
