@@ -14,7 +14,8 @@ void times_table(void)
 		for (xnum = 0; xnum <= 9; xnum++)
 		{
 			multip = num * xnum;
-			if (multip / 10 > 0)
+			/* prints the first digit */
+			if (multip / 10 >= 1)
 			{
 				_putchar((multip / 10) + '0');
 			}
@@ -22,6 +23,7 @@ void times_table(void)
 			{
 				_putchar(' ');
 			}
+			/* prints second number */
 			_putchar((multip % 10) + '0');
 
 			if (xnum < 9)
