@@ -11,10 +11,10 @@ int main(void)
 {
 	int n, sum;
 
+	sum = 0;
 	/* sets the range of the checks and computation */
 	for (n = 1; n < 1024; n++)
 	{
-		sum = 0;
 		/**
 		  * perform the computation for only number
 		  * divisible by 3 or 5
