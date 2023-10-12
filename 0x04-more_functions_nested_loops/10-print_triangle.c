@@ -22,7 +22,7 @@ void print_triangle(int size)
 			/* iterating through each space on a level */
 			for (item = 1; item <= size; ++item)
 			{
-				if (item > (size-level))
+				if (item > (size - level))
 				{
 					_putchar(35);
 				}
