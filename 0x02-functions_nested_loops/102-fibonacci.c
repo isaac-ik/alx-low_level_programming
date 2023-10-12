@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
-  * main - a program that prints the first 50 Fibonacci numbers, starting with 1 and 2
+  * main - a program
+  * Description: a program that prints the first 50 Fibonacci numbers,
+  * starting with 1 and 2
   * Programmer: Isaac-ik
-  * Retuurn: 0
+  * Return: 0
   */
 int main(void)
 {
