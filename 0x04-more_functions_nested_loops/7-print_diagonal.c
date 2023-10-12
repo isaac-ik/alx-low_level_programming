@@ -22,11 +22,11 @@ void print_diagonal(int n)
 			/* iterating through each space on a level */
 			for (item = 1; item <= level; ++item)
 			{
-				_putchar(' ');
+				_putchar(32);
 			}
 			/* ASCII for \: 92 */
 			_putchar(92);
-			_putchar('\n');
+			_putchar(10);
 		}
 	}
 }
