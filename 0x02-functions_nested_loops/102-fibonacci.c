@@ -9,19 +9,20 @@
   */
 int main(void)
 {
-	int count, fN, sN, tN;
+	long int fN, sN, tN;
+	int count;
 
-	count = 0;
+	count = 1;
 	fN = 1;
 	sN = 2;
-	while (count < 49)
+	while (count < 50)
 	{
-		printf("%d, ", fN);
+		printf("%ld, ", fN);
 		tN = fN + sN;
 		fN = sN;
 		sN = tN;
 		count = count + 1;
 	}
-	printf("\n");
+	printf("%ld\n", fN);
 	return (0);
 }
