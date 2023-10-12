@@ -17,10 +17,10 @@ void print_diagonal(int n)
 	else
 	{
 		/* iterating through differnet levels */
-		for (level = 1; level <= n; level++)
+		for (level = 1; level <= n; ++level)
 		{
 			/* iterating through each space on a level */
-			for (item = 0; item < level; item++)
+			for (item = 1; item <= level; ++item)
 			{
 				_putchar(' ');
 			}
