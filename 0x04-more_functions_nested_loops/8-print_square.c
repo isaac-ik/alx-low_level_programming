@@ -22,11 +22,16 @@ void print_square(int size)
 			/* iterating through each space on a level */
 			for (item = 1; item <= size; ++item)
 			{
-				_putchar(35);
+				if (item > (size - 1))
+				{
+					_putchar(35);
+					_putchar(10);
+				}
+				else
+				{
+					_putchar(35);
+				}
 			}
-			/* ASCII for \: 92 */
-			_putchar(35);
-			_putchar('\n');
 		}
 	}
 }
