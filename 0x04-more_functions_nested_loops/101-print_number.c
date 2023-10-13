@@ -2,7 +2,7 @@
 
 /**
  * print_number - Prints an integer.
- *
+ * Programmer: Isaac-ik
  * @n: The integer to be printed.
 */
 

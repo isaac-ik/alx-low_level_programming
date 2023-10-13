@@ -4,7 +4,7 @@
  * _sqrt - finds the square root
  *
  * @x: input number
- *
+ * Programmer: Isaac-ik
  * Return: square root of x
  *
 */
