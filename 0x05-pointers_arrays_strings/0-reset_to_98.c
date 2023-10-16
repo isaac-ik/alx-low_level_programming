@@ -2,8 +2,8 @@
 
 /**
   * reset-to_98 - function
-  * @pn: a pointer 
-  * Description: takes a pointer to an int as parameter 
+  * @pn: a pointer
+  * Description: takes a pointer to an int as parameter
   * and updates the value it points to to 98
   * Programmer:Isaac-ik
   * Return: nothing
