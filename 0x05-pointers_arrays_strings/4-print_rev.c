@@ -14,7 +14,7 @@ void print_rev(char *ps)
 	int i;
 
 	len = 0;
-	while(*ps != '\0')
+	while (*ps != '\0')
 	{
 		len = len + 1;
 		ps++;
@@ -22,7 +22,7 @@ void print_rev(char *ps)
 	ps = ps - len;
 
 	/* prints from the back to the front */
-	for(i = len - 1; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 	{
 		_putchar(*(ps + i));
 	}
