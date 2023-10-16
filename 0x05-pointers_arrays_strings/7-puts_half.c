@@ -14,9 +14,16 @@ void puts_half(char *pstr)
 	int len, i, h_len;
 
 	len = _strlen(pstr);
-	h_len = len / 2;
+	if (len % 2 == 0)
+	{
+		h_len = (len) / 2;
+	}
+	else
+	{
+		h_len = (len - 1) / 2;
+	}
 
-	for (i = h_len - 1; i <= len; i++)
+	for (i = h_len; i <= len - 1; i++)
 	{
 		_putchar(*(pstr + i));
 	}
