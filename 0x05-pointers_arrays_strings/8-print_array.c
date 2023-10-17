@@ -17,7 +17,7 @@ void print_array(int *pa, int n)
 
 	len = _len(pa);
 
-	if (n < 0 || n > len - 1)
+	if (n <= 0 || n > len - 1)
 	{
 		printf("\n");
 	}
