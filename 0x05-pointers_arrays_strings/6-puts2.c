@@ -1,25 +1,31 @@
 #include "main.h"
 
 int _strlen(char *ps);
+
 /**
   * puts2 - a function
-  * @pstr - string
-  * Description: prints every other character of a string, 
+  * @pstr: string
+  * Description: prints every other character of a string,
   * starting with the first character, followed by a new line.
   * Programmer: Isaac-ik
   * Return: nothing
   */
 void puts2(char *pstr)
 {
-	int ev = 0;
+	int i, len;
 
-	while (*(pstr + ev) != '\0')
+	len = _strlen(pstr);
+
+	for (i = 0; i < len; i++)
 	{
-		_putchar(*(pstr + ev));
-		ev = ev + 2;
+		if (i % 2 == 0 && *(pstr + i) != '\0')
+		{
+			_putchar(*(pstr + i));
+		}
 	}
 	_putchar('\n');
 }
+
 /**
   * _strlen - a function
   * @ps: a pointer to a string
