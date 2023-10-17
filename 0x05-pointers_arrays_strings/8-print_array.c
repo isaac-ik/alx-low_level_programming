@@ -39,7 +39,7 @@ void print_array(int *pa, int n)
 	}
 }
 /**
-  * _strlen - a function
+  * _len - a function
   * @ps: a pointer to a string
   * Description: returns the length of a string
   * Programmer: Isaac-ik
