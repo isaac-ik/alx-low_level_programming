@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
+int _len(int *ps);
 /**
   * print_array - function
   * @pa: pointer to an array
@@ -12,19 +13,28 @@
   */
 void print_array(int *pa, int n)
 {
-	int i;
+	int i, len;
 
-	/* iterate through the array from 0 to n */
-	for (i = 0; i <= n - 1; i++)
+	len = _len(pa);
+
+	if (n < 0 || n > len - 1)
 	{
-		/* if at n, the last elment to be printed */
-		if (i == n - 1)
+		printf("\n");
+	}
+	else
+	{
+		/* iterate through the array from 0 to n */
+		for (i = 0; i <= n - 1; i++)
 		{
-			printf("%d\n", *(pa + i));
-		}
-		else
-		{
-			printf("%d, ", *(pa + i));
+			/* if at n, the last elment to be printed */
+			if (i == n - 1)
+			{
+				printf("%d\n", *(pa + i));
+			}
+			else
+			{
+				printf("%d, ", *(pa + i));
+			}
 		}
 	}
 }
@@ -35,10 +45,10 @@ void print_array(int *pa, int n)
   * Programmer: Isaac-ik
   * Return: length of the string
   */
-int _strlen(char *ps)
+int _len(int *ps)
 {
 	int length;
-	char *pi;
+	int *pi;
 
 	length = 0;
 	pi = ps;
