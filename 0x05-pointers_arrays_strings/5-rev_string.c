@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _strlen(char *ps);
 /**
   * rev_string - a function
   * @ps: a pointer to a string arg
@@ -10,23 +11,18 @@
 void rev_string(char *ps)
 {
 	/* find the last char and return length */
-	int len;
+	int len, temph;
 	int i;
 
-	len = 0;
-	while (*ps != '\0')
-	{
-		len = len + 1;
-		ps++;
-	}
-	ps = ps - len;
+	len = _strlen(ps);
 
-	/* prints from the back to the front */
-	for (i = len - 1; i >= 0; i--)
+	/* swaps values at each ends */
+	for (i = 0; i < len / 2; i++)
 	{
-		_putchar(*(ps + i));
+		temph = *(ps + i);
+		*(ps + i) = *(ps + len - 1 - i);
+		*(ps + len - 1 - i) = temph;
 	}
-	_putchar('\n');
 }
 
 /**
