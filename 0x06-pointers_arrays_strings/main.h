@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int _strlen(char *ps);
+
 char *_strcat(char *pdest, char *psrc);
 char *_strncat(char *pdest, char *psrc, int n);
 char *_strncpy(char *pdest, char *psrc, int n);
