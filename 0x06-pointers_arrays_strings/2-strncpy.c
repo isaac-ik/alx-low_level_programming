@@ -10,17 +10,33 @@
   */
 char *_strncpy(char *pdest, char *psrc, int n)
 {
-	int i;
+	int i, u;
 
-	/**
-	  * iterate through the second char
-	  * until condition is meet
-	  * condition: n has been reached or the end of
-	  * the second str has been reached.
-	  */
-	for (i = 0; i < n || *(psrc + i) == '\0'; i++)
+	/* iterate through form 0 to n */
+	for (i = 0; i < n; i++)
 	{
-		*(pdest + i) = *(psrc + i);
+		/**
+		  * check if
+		  * the last char of str has reached and
+		  * n has not been reached
+		  */
+		if (psrc[i] == '\0' && i < n)
+		{
+			/**
+			  * if yes, iterate from that point while replacing the remaining space
+			  * with NULL char until n is reached
+			  */
+			for (u = i; u < n; u++)
+			{
+				pdest[u] = '\0';
+			}
+			i = u;
+		}
+		/* else: do normal copying */
+		else
+		{
+			*(pdest + i) = *(psrc + i);
+		}
 	}
 	return (pdest);
 }
