@@ -15,7 +15,7 @@ char *_memset(char *ps, char b, unsigned int n)
 	unsigned int i;
 
 	/* iterate through from ps to n bytes after */
-	for (i = 0; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
 		*(ps + i) = b;
 		/**
