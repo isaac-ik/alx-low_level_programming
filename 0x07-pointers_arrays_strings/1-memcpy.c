@@ -11,4 +11,13 @@
   */
 char *_memcpy(char *pdest, char *psrc, unsigned int n)
 {
+	unsigned int i;
 
+	/* iterate through 0 to n-1 */
+	for (i = 0; i < n; i++)
+	{
+		/* Assign soucre byte to desintation byte for each iteration */
+		*(pdest + i) = *(psrc + i);
+	}
+	return (pdest);
+}
