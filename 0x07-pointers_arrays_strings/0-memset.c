@@ -17,16 +17,19 @@ char *_memset(char *ps, char b, unsigned int n)
 	/* iterate through from ps to n bytes after */
 	for (i = 0; i <= n; i++)
 	{
-		/* Assign the last to NULL */
-		if (i == n)
-		{
-			*(ps + i) = '\0';
-		}
-		/* Assign the first to nth to the constant byte */
-		else
-		{
-			*(ps + i) = b;
-		}
+		*(ps + i) = b;
+		/**
+		 * Assign the last to NULL
+		 * if (i == n)
+		 * {
+		 *	*(ps + i) = '\0';
+		 * }
+		 * Assign the first to nth to the constant byte
+		 * else
+		 * {
+		 *	*(ps + i) = b;
+		 * }
+		 */
 	}
 	return (ps);
 }
