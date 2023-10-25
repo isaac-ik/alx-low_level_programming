@@ -11,6 +11,6 @@ void _print_rev_recursion(char *ps)
 	if (*ps != '\0')
 	{
 		_print_rev_recursion(ps + 1);
+		_putchar(*ps);
 	}
-	_putchar(*ps);
 }
