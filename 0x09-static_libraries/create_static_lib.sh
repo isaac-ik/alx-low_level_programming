@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c ./c-files/*.c && ar -rc liball.a *.o && rm *.o
+gcc -c *.c && ar rc liball.a *.o && rm -f *.o
