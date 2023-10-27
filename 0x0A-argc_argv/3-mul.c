@@ -12,7 +12,11 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv)
 {
 	if (argc == 3)
 	{
-		printf("%d\n", (*argv[1] * *argv[2]));
+		int n,b;
+
+		n = *argv[1] - '0';
+		b = *argv[2] - '0';
+		printf("%d\n", (n * b));
 	}
 	else
 	{
