@@ -12,11 +12,12 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv)
 {
 	if (argc == 3)
 	{
-		int n,b;
+		int n,b, mul;
 
 		n = *argv[1] - '0';
 		b = *argv[2] - '0';
-		printf("%d\n", (n * b));
+		mul = n * b;
+		printf("%d\n", mul);
 	}
 	else
 	{
