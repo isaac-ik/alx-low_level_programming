@@ -18,7 +18,6 @@ int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv)
 
 		n = atoi(argv[1]);
 		b = atoi(argv[2]);
-		
 		add = n + b;
 		printf("%d\n", add);
 	}
