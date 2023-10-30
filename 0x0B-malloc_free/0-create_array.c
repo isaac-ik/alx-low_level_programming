@@ -23,6 +23,9 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	parray[0] = c;
+	for (i = 0; i = size - 1; i++)
+	{
+		parray[i] = c;
+	}
 	return (parray);
 }
