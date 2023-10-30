@@ -12,6 +12,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *parray;
+	unsigned int i;
 
 	if (size == 0)
 	{
@@ -23,9 +24,9 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	for (i = 0; i = size - 1; i++)
+	for (i = 0; i == size - 1; i++)
 	{
-		parray[i] = c;
+		*(parray + i) = c;
 	}
 	return (parray);
 }
