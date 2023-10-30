@@ -47,5 +47,5 @@ int _strlen(char *pstr)
 	{
 		count++;
 	}
-	return (count);
+	return (count + 1);
 }
