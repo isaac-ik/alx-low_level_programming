@@ -17,7 +17,7 @@ char *str_concat(char *ps1, char *ps2)
 {
 	int i, lengthOfS1, lengthOfS2, sum, u;
 	char *pnew;
-	
+
 	if (ps1 == NULL)
 		ps1 = "";
 	if (ps2 == NULL)
