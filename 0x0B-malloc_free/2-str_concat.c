@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 int _strlen(char *pstr);
 /**
@@ -14,27 +15,29 @@ int _strlen(char *pstr);
  */
 char *str_concat(char *ps1, char *ps2)
 {
-	int i, lengthOfS1, lengthOfS2, sum;
+	int i, lengthOfS1, lengthOfS2, sum, u;
 	char *pnew;
 
 	lengthOfS1 = _strlen(ps1);
 	lengthOfS2 = _strlen(ps2);
 	sum = lengthOfS1 + lengthOfS2;
 
-	pnew = malloc(sizeof(char) * (sum - 1));
+	pnew = malloc((sum - 1));
 	if (pnew == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i <= sum - 1; i++)
+	for (i = 0; i < sum; i++)
 	{
-		if (i <= lengthOfS1 - 1)
+		for (u = 0; i < lengthOfS1 && ps1[u] != '\0'; u++)
 		{
-			pnew[i] = ps1[i];
+			pnew[i] = ps1[u];
+			i++;
 		}
-		else if (i >= lengthOfS1)
+		for (u = 0; i < sum - 1 && ps2[u] != '\0'; u++)
 		{
-			pnew[i] = ps2[(i - lengthOfS1)];
+			pnew[i] = ps2[u];
+			i++;
 		}
 	}
 	return (pnew);
