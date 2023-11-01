@@ -8,30 +8,23 @@
  * @height: the height
  * Return: NULL on failure If width or height is 0 or negative, return NULL
  */
-int **alloc_width(int width,int height)
+int **alloc_grid(int width, int height)
 {
-	int **pmatrix, *array, size, h, w;
-	
-	size = width * height;
-	array = malloc(size);
-	pmatrix = &array;
+	int **pmatrix, h, w;
 
-	if (width == NULL || height == NULL || pmatrix == NULL)
+	pmatrix = (int **)malloc(sizeof(int *) * height);
+	if (pmatrix == NULL)
 	{
 		return (NULL);
 	}
 	for (h = 0; h < height; h++)
 	{
-		for (w = 0; w <= width; w++)
+		pmatrix[h] = (int *)malloc(sizeof(int) * width);
+		if (pmatrix[h] == NULL)
+			return (NULL);
+		for (w = 0; w < width; w++)
 		{
-			if (w == width)
-			{
-				array[h][w] = '\0';
-			}
-			else
-			{
-				array[h][w] = 0;
-			}
+			pmatrix[h][w] = 0;
 		}
 	}
 	return (pmatrix);
