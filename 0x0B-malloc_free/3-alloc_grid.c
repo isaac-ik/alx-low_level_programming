@@ -12,6 +12,11 @@ int **alloc_grid(int width, int height)
 {
 	int **pmatrix, h, w;
 
+	if (width == 0 || height == 0)
+	{
+		return (NULL);
+	}
+
 	pmatrix = (int **)malloc(sizeof(int *) * height);
 	if (pmatrix == NULL)
 	{
