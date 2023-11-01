@@ -4,7 +4,7 @@
 
 /**
  * free_grid - frees a 2 D array
- * Description: frees a 2 dimensional grid 
+ * Description: frees a 2 dimensional grid
  * previously created by your alloc_grid function.
  * Programmer: Isaac-ik
  * @grid: previousy created array
