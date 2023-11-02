@@ -17,6 +17,11 @@ char *string_nconcat(char *ps1, char *ps2, unsigned int n)
 {
 	unsigned index, i, s;
 	char *pnew;
+
+	if (ps1 == NULL)
+		ps1 = "";
+	if (ps2 == NULL)
+		ps2 = "";
 	
 	if (n >= sizeof(ps2) - 1)
 	{
