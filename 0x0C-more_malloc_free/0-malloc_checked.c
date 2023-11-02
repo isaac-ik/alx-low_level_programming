@@ -6,7 +6,7 @@
  *  malloc_checked - function
  *  Description: allocates memory using malloc.
  *  Programmer: Isaac-ik
- *  @b - the number of space to be allocated
+ *  @b: the number of space to be allocated
  *  Return: a pointer to the allocated memory
  */
 void *malloc_checked(unsigned int b)
