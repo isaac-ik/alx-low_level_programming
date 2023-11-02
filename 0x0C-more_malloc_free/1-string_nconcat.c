@@ -15,24 +15,26 @@
  */
 char *string_nconcat(char *ps1, char *ps2, unsigned int n)
 {
-	unsigned index, i, s;
+	unsigned index, i, s, spacef1, spacef2;
 	char *pnew;
 
 	if (ps1 == NULL)
 		ps1 = "";
 	if (ps2 == NULL)
 		ps2 = "";
-	
-	if (n >= sizeof(ps2) - 1)
+
+	spacef1 = sizeof(*ps1) - 1;
+
+	if (n >= sizeof(*ps2) - 1)
 	{
-		s = sizeof(ps2) - 1;
+		spacef2 = sizeof(*ps2) - 1;
 	}
 	else
 	{
-		s = n;
+		spacef2 = n;
 	}
 
-	pnew = (char *)malloc(sizeof(ps1) + s - 1);
+	pnew = (char *)malloc(spacef1 + spacef2 + 1);
 	if (pnew == NULL)
 	{
 		return (NULL);
@@ -44,9 +46,9 @@ char *string_nconcat(char *ps1, char *ps2, unsigned int n)
 		pnew[index] = ps1[i];
 		index++;
 	}
-	for (i = 0; i <= s; i++)
+	for (s = 0; s <= spacef2; i++)
 	{
-		pnew[index] = ps2[i];
+		pnew[index] = ps2[s];
 		index++;
 	}
 	pnew[index] = '\0';
