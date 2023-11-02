@@ -12,20 +12,22 @@
  */
 int main(int __attribute__((unused)) argc, char __attribute__((unused)) **argv)
 {
-	if (argc == 3)
-	{
-		int n, b, add;
+	int i, sum;
 
-		n = atoi(argv[1]);
-		b = atoi(argv[2]);
-		add = n + b;
-		printf("%d\n", add);
-	}
-	else
+	sum = 0;
+	for (i = 1; argv[i] != NULL; i++)
 	{
-		printf("Error\n");
-		return (1);
+		if (atoi(argv[i]) != 0)
+		{
+			sum = sum + atoi(argv[i]);
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
+	printf("%d\n", sum);
 	return (0);
 }
 
