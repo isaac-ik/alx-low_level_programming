@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  *  string_nconcat - function
@@ -15,7 +16,7 @@
  */
 char *string_nconcat(char *ps1, char *ps2, unsigned int n)
 {
-	unsigned index, i, s, spacef1, spacef2;
+	unsigned int index, i, s, spacef1, spacef2;
 	char *pnew;
 
 	if (ps1 == NULL)
@@ -23,11 +24,12 @@ char *string_nconcat(char *ps1, char *ps2, unsigned int n)
 	if (ps2 == NULL)
 		ps2 = "";
 
-	spacef1 = sizeof(*ps1) - 1;
+	spacef1 = strlen(ps1);
+	spacef2 = strlen(ps2);
 
-	if (n >= sizeof(*ps2) - 1)
+	if (n >= spacef2)
 	{
-		spacef2 = sizeof(*ps2) - 1;
+		spacef2 = strlen(ps2);
 	}
 	else
 	{
@@ -46,7 +48,7 @@ char *string_nconcat(char *ps1, char *ps2, unsigned int n)
 		pnew[index] = ps1[i];
 		index++;
 	}
-	for (s = 0; s <= spacef2; i++)
+	for (s = 0; s <= spacef2; s++)
 	{
 		pnew[index] = ps2[s];
 		index++;
