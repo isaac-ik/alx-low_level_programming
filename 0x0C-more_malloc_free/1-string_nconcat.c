@@ -48,7 +48,7 @@ char *string_nconcat(char *ps1, char *ps2, unsigned int n)
 		pnew[index] = ps1[i];
 		index++;
 	}
-	for (s = 0; s <= spacef2; s++)
+	for (s = 0; s < spacef2; s++)
 	{
 		pnew[index] = ps2[s];
 		index++;
