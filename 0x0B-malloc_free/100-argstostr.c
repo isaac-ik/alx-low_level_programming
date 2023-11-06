@@ -23,13 +23,14 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)
 	{
+		/* ./argc how are you */
 		len = len + _strlen(av[i]);
 	}
 	/* creating a a new arry of char for concentated arguments */
-	pstr = (char *)malloc(sizeof(char) * len);
+	pstr = (char *)malloc(sizeof(char) * (len + ac + 1));
 	if (pstr == NULL)
 		return (NULL);
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len + ac; i++)
 	{
 		for (u = 0; u < ac; u++)
 		{
@@ -42,6 +43,7 @@ char *argstostr(int ac, char **av)
 			i++;
 		}
 	}
+	pstr[i] = '\0';
 	return (pstr);
 }
 /**
