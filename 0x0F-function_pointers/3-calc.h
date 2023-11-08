@@ -2,6 +2,8 @@
 #define CALC_H
 
 #include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /* ADDITION */
 int op_add(int a, int b);

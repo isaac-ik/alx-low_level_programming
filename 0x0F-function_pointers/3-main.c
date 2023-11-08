@@ -12,31 +12,27 @@
  */
 int main(int argc, char **argv)
 {
-	int num1, num2, result;
+	long int num1, num2, result;
 
 	/* Check if no of argumnet is not 4 */
-	if (argc > 4 || argc < 4)
+	if (argc > 4 || argc < 4 || atoi(argv[1]) == 0 || atoi(argv[3]) == 0)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (atoi(argv[1]) == 0 || atoi(argv[3]) == 0)
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	
+	result = get_op_func(argv[2])(num1, num2);
+	if (result == -1)
 	{
-		printf("Error - not valid integer\n");
-		exit(98);
+		/* The operator is not among the defined ones */
+		printf("Error\n");
+		exit(99);
 	}
-	if (*argv[2] == '+' ||  *argv[2] == '-' || *argv[2] == '*' || *argv[2] == '/' || *argv[2] == '%')
-	{
-		num1 = atoi(argv[1]);
-		num2 = atoi(argv[3]);
-
-		result = get_op_func(argv[2])(num1, num2);
-		printf("%d\n", result);
-
-		return (result);
-	}
-	printf("Error\n");
-	exit(99);
-
+	printf("%l\n", result);
+	
+	return (result);
 }
 
