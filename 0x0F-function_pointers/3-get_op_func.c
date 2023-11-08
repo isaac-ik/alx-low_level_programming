@@ -6,6 +6,8 @@
  * Description: selects the correct function to
  * perform the operation asked by the user.
  * @ps: operator sign
+ * @a: first num
+ * @b: second
  * Return: a pointer to a function
  */
 int (*get_op_func(char *ps))(int, int)
@@ -22,7 +24,7 @@ int (*get_op_func(char *ps))(int, int)
 
 	while (ops[i].pop != NULL)
 	{
-		if (ps == ops[i].pop)
+		if (*ps == *(ops[i].pop))
 		{
 			return (ops[i].pf);
 		}
