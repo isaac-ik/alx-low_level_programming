@@ -10,5 +10,6 @@
  */
 void print_name(char *pname, void (*pf)(char *))
 {
-	pf(pname);
+	if (pname != NULL && pf != NULL)
+		pf(pname);
 }
