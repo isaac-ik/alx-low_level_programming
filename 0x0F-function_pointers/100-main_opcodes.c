@@ -29,6 +29,10 @@ int main(int argc, char **argv)
 	for (i = 0; i < number_of_byte; i++)
 	{
 		printf("%02x ", pmain[i]);
+		if (i < number_of_byte - 1)
+		{
+			printf(" ");
+		}
 	}
 	printf("\n");
 	return (0);
