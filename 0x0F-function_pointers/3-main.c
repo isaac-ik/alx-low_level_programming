@@ -29,7 +29,6 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(100);
 	}
-	
 	if (get_op_func(argv[2]) == NULL)
 	{
 		/* The operator is not among the defined ones */
@@ -38,7 +37,6 @@ int main(int argc, char **argv)
 	}
 	result = get_op_func(argv[2])(num1, num2);
 	printf("%d\n", result);
-	
 	return (result);
 }
 
