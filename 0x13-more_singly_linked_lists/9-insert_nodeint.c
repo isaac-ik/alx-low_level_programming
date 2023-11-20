@@ -8,9 +8,9 @@
  * Programmer: Isaac-ik
  * Description: adds a new element to the index in a listint_t list.
  * @head: address holding the address of beginning to the list
- * @index: index
+ * @idx: index
  * @n: the new node element
- * Return: the address of the 
+ * Return: the address of the new elment
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
@@ -27,7 +27,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 	/* if the next address of the current node doesnt point to NULL */
-	while (p->next != NULL || idx >= node)
+	while (p->next != NULL && idx >= node)
 	{
 		if (idx == node)
 		{
