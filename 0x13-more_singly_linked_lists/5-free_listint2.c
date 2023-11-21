@@ -16,8 +16,10 @@ void free_listint2(listint_t **head)
 	listint_t *j;
 
 	if (p == NULL)
+	{
 		*head = NULL;
 		exit(1);
+	}
 
 	/* if the next node is points to nothing */
 	if (p->next == NULL)
@@ -33,7 +35,7 @@ void free_listint2(listint_t **head)
 		j = p->next; /* assign the next node to j */
 		free(p); /* free the current node */
 		free_listint2(&j); /* call the free_listint function on j */
+		*head = NULL;
+		exit(1);
 	}
-	*head = NULL;
-	exit(1);
 }
