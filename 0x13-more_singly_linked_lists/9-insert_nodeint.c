@@ -42,19 +42,23 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new;
+	listint_t *new, *j, *pre, *p = *head;
 	unsigned int node = 0;
-	listint_t *p = *head;/* assign it the address of the list */
-	listint_t *j, *pre;
 
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
+	/* Case1: if the list is empty and index is not 0 */
 	if (p == NULL && idx != 0)
-	{
 		return (NULL);
+	/* if empty and index was 0 */
+	if (p == NULL && idx == 0)
+	{
+		*head = new;
+		new->n = n;
+		new->next = NULL;
 	}
-	/* if the next address of the current node doesnt point to NULL */
+	/* Case3: list is not empty and cuurent node is greater than imdex given */
 	while (p->next != NULL && idx >= node)
 	{
 		if (idx == 0)
