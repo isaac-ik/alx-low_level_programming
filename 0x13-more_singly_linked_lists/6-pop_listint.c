@@ -27,6 +27,8 @@ int pop_listint(listint_t **head)
 		{
 			*head  = p->next; /* assign the next node address to head */
 		}
+		else
+			*head = NULL;
 		free(p);
 	}
 
