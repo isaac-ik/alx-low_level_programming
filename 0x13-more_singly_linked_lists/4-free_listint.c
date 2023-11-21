@@ -15,14 +15,18 @@ void free_listint(listint_t *head)
 	listint_t *p = head;
 	listint_t *j;
 
-	/* if the next node is points to nothing */
+	/* Case1: if the list is empty */
+	if (p == NULL)
+		exit(1);
+
+	/* Case2: if the next node is points to nothing */
 	if (p->next == NULL)
 	{
 		free(p); /* just free the current node */
 		exit(1);
 	}
 
-	/* if the next node points to something */
+	/* Case3: if the next node points to something */
 	if (p->next != NULL)
 	{
 		j = p->next; /* assign the next node to j */
