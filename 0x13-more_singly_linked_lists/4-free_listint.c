@@ -23,6 +23,7 @@ void free_listint(listint_t *head)
 	if (p->next == NULL)
 	{
 		free(p); /* just free the current node */
+		exit(1);
 	}
 
 	/* Case3: if the next node points to something */
@@ -31,5 +32,7 @@ void free_listint(listint_t *head)
 		j = p->next; /* assign the next node to j */
 		free(p); /* free the current node */
 		free_listint(j); /* call the free_listint function on j */
+		exit(1);
 	}
+	exit(1);
 }
