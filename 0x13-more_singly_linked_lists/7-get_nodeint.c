@@ -20,7 +20,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		return (NULL);
 
 	/* the address isnt pointing to a NULL */
-	while (p != NULL || index >= node)
+	while (p != NULL)
 	{
 		if (index == node)
 		{
