@@ -21,18 +21,25 @@ ssize_t read_textfile(const char *pfilename, size_t letters)
 
 	/* check if the filename is empty */
 	if (pfilename == NULL)
+	{
+		free(str);
 		return (0);
+	}
 	/* open the file */
 	file = open(pfilename, O_RDONLY);
 	/* check if the the file cant be opened */
 	if (file < 0)
+	{
+		free(str);
 		return (0);
+	}
 	/* read 'letters' no of byte into buffer 'str' from 'file' */
 	count = read(file, str, letters);
 	/* check if the file cant be read */
 	if (count < 0)
 	{
 		close(file);
+		free(str);
 		return (0);
 	}
 	/* write to 'letters' no of byte from buffer 'str' to stdout */
@@ -40,6 +47,7 @@ ssize_t read_textfile(const char *pfilename, size_t letters)
 	if (l < 0)
 	{
 		close(file);
+		free(str);
 		return (0);
 	}
 	free(str);
