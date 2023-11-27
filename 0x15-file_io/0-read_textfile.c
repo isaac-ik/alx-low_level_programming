@@ -5,9 +5,9 @@
  * read_textfile - reads a text file
  * Description:  reads a text file and prints it to the POSIX standard output.
  * @pfilename: pointer to the file
- * @letter: number of letters to print
+ * @letters: number of letters to print
  * Programmer: Isaac-ik
- * Return: number of actual letters it could read and print, else 0, if any error occured
+ * Return: number of actual letters read and printed, else 0, if any error
  */
 ssize_t read_textfile(const char *pfilename, size_t letters)
 {
@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *pfilename, size_t letters)
 	if (count < 0)
 		return (0);
 
-	/* write to 'letters' no of byte from buffer 'str' to standard output */ 
+	/* write to 'letters' no of byte from buffer 'str' to stdout */
 	l = write(STDOUT_FILENO, str, letters);
 	if (l < 0)
 		return (0);
