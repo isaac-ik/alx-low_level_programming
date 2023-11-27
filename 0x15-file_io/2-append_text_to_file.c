@@ -18,7 +18,7 @@ int append_text_to_file(const char *pfilename, char *ptext_content)
 	fileD = open(pfilename, O_WRONLY | O_APPEND);
 	if (fileD < 0)
 	{
-		return(-1);
+		return (-1);
 	}
 	while (ptext_content[i] != '\0')
 	{
@@ -33,7 +33,6 @@ int append_text_to_file(const char *pfilename, char *ptext_content)
 		return (-1);
 	}
 	i++;
-	
 
 	/* close file */
 	close(fileD);
