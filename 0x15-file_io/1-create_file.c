@@ -30,7 +30,7 @@ int create_file(const char *pfilename, char *ptext_content)
 {
 	int fileD, s;
 
-	if (filename == NULL)
+	if (pfilename == NULL)
 		return (-1);
 	/* Open a file */
 	fileD = open(pfilename, O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
