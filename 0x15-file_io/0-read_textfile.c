@@ -2,6 +2,27 @@
 #include <stdlib.h>
 
 /**
+ * len - get len
+ * @pstr: string
+ * Return: length
+ */
+int len(char *pstr)
+{
+	int count = 0, i;
+
+	if (pstr == NULL)
+	{
+		return (0);
+	}
+
+	for (i = 0; pstr[i] != '\0'; i++)
+	{
+		count++;
+	}
+	return (count);
+}
+
+/**
  * read_textfile - reads a text file
  * Description:  reads a text file and prints it to the POSIX standard output.
  * @pfilename: pointer to the file
@@ -12,7 +33,7 @@
 ssize_t read_textfile(const char *pfilename, size_t letters)
 {
 	char *str;
-	ssize_t file, count, l;
+	ssize_t file, count, l, num;
 
 	/* create an empty buffer */
 	str = (char *)malloc(sizeof(char) * (letters + 1));
@@ -43,7 +64,8 @@ ssize_t read_textfile(const char *pfilename, size_t letters)
 		return (0);
 	}
 	/* write to 'letters' no of byte from buffer 'str' to stdout */
-	l = write(STDOUT_FILENO, str, letters);
+	num = len(str);
+	l = write(STDOUT_FILENO, str, num);
 	if (l < 0)
 	{
 		close(file);
