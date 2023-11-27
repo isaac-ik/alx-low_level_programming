@@ -25,17 +25,21 @@ ssize_t read_textfile(const char *pfilename, size_t letters)
 	/* check if the the file cant be opened */
 	if (file < 0)
 		return (0);
-
 	/* read 'letters' no of byte into buffer 'str' from 'file' */
 	count = read(file, str, letters);
 	/* check if the file cant be read */
 	if (count < 0)
+	{
+		close(file);
 		return (0);
-
+	}
 	/* write to 'letters' no of byte from buffer 'str' to stdout */
 	l = write(STDOUT_FILENO, str, letters);
 	if (l < 0)
+	{
+		close(file);
 		return (0);
+	}
 
 	return (count);
 }
