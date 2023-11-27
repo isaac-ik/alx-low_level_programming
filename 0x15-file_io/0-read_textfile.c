@@ -16,6 +16,8 @@ ssize_t read_textfile(const char *pfilename, size_t letters)
 
 	/* create an empty buffer */
 	str = (char *)malloc(sizeof(char) * (letters + 1));
+	if (str == NULL)
+		return (0);
 
 	/* check if the filename is empty */
 	if (pfilename == NULL)
@@ -40,6 +42,7 @@ ssize_t read_textfile(const char *pfilename, size_t letters)
 		close(file);
 		return (0);
 	}
+	free(str);
 
 	return (count);
 }
