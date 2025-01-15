@@ -86,11 +86,7 @@ How to Use
 Author
 ------
 
--   **Isaac Ikem**
+-   **Isaac Ikhaiduwor**
 
 -   GitHub: [isaac-ik](https://github.com/isaac-ik)
 
-License
--------
-
-This project is open-source and available under the MIT License.
